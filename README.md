@@ -41,7 +41,7 @@ cp -r ./HumanML3D/ dataset/HumanML3D
 **SnapMoGen** - Download the data from [huggingface](https://huggingface.co/datasets/Ericguo5513/SnapMoGen), then place it in the following directory:
 
 ```shell
-cp -r ./SnapMoGen dataset/SnapMoGen
+cp -r ./SnapMoGen/ dataset/SnapMoGen
 ```
 
 ## 🏃 Generation
@@ -49,13 +49,13 @@ cp -r ./SnapMoGen dataset/SnapMoGen
 ### (a) Generate with single textual instruction
 
 ```python
-python -m sample.generate --model_path ./save/tric_motion_L/model.pt --text_prompt "A person jumps up then waits for a bit and then walks forwards."
+python -m sample.generate --model_path ./save/tric_motion_model_humanml/model000800000.pt --text_prompt "A person jumps up then waits for a bit and then walks forwards."
 ```
 
 ### (b) Generate from a prompt file
 
 ```python
-python -m sample.generate --model_path ./save/tric_motion_L/model.pt --input_text ./assets/example_text_prompts.txt
+python -m sample.generate --model_path ./save/tric_motion_model_humanml/model000800000.pt --input_text ./assets/prompts.txt
 ```
 
 ## 📖 Evaluation
@@ -74,7 +74,7 @@ This code is standing on the shoulders of giants, we would like to thank the fol
 
 ## 👍 Citation
 
-```txt
+```bibtex
 @inproceedings{Cao2026TriCMotionTC,
   title={TriC-Motion: Tri-Domain Causal Modeling Grounded Text-to-Motion Generation},
   author={Yiyang Cao and Yunze Deng and Ziyu Lin and Bin Feng and Xinggang Wang and Wenyu Liu and Dandan Zheng and Jingdong Chen},
